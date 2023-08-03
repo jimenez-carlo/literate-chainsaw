@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+:root{
+  --background: #ededed;
+  --white:#fff;
+  --black:#242422;
+}
+
+*{
+  box-sizing:border-box;
+  margin: 0;
+}
+
+body{
+  background: var(--background);
+  color: var(--black);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+header,main{
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  padding: 0px 1rem;
+}
+
+header>:first-child{
+  display: none;
+}
+
+header>*{
+  height: 60vh;
+  padding: 2rem 1rem;
+}
+
+h1{
+  margin: .5rem 0px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  opacity: 0.85;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+h2>*{
+  padding: 1rem;
+}
+
+h5{
+  font-weight: lighter;
+}
+
+input[type="text"]{
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.3rem;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-top: 1.5rem;
+  margin-right: 5px;
+  opacity: 0.85;
+  width: 100%;
+}
+
+p{
+  line-height: 1.4rem;
+  font-weight: lighter;
+}
+
+button{
+  padding: 0.5rem 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 7%;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-top: 1.5rem;
+  margin-right: 5px;
+  opacity: 0.85;
+}
+
+button:hover{ 
+  opacity: 1;
+}
+
+.header-img{
+  padding: 0;
+  background: url("assets/image.png");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.icon{
+  padding: 0;
+  margin-right: 1rem;
+}
+
+.tile{
+  border-radius: 1rem;
+  border-color: var(--background);
+  width: 85%;
+  margin-bottom: 3.1rem;
+}
+
+.tile.text-white>*{
+  color:var(--white);
+}
+
+.tile>*{
+  padding: 1rem;
+}
+
+.tile>h2{
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.tile>p{
+  padding: 1rem;
+}
+
+.odd{
+  align-self: self-start;
+}
+
+.even{
+  align-self: self-end;
+}
+
+@media only screen and (min-width: 1024px) {
+  h1{
+    font-size: 2.5rem;
+  }
+
+  header{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10vh;
+  }
+
+  header>:first-child{
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    padding: 0 7vw 0 7vw;
+  }
+
+  header>:nth-child(3){
+    display: none;
+  }
+
+  header>*{
+    height: 90vh;
+    width: 50%;
+  }
+
+  main{
+    padding: 0 32vw;
+  }
+
+  .header-img{
+    background-position: center center; 
+  }
+
+  .tile{
+    width: 28vw;
+    max-width: 18rem;
+  }
+
+}
